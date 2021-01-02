@@ -1,0 +1,16 @@
+Shipment_ID,Shipment_Date,Destination,DistributionCenterID,NGO
+0105032020,2020-05-03,Nigeria,DIST01,Helping Hands of Ngwobo
+0205062020,2020-05-06,Sierra-Leone,DIST03,Servant of Gods
+0305112020,2020-05-11,Somalia,DIST04,Do Good Feel Good
+0405172020,2020-05-17,Chad,DIST04,End of Suffering
+0505232020,2020-05-23,Community Recycling,DIST01,Community Recycling
+0605202020,2020-05-20,Oxfam,DIST03,Oxfam
+0705082020,2020-05-08,Community Recycling,DIST04,Community Recycling
+0806092020,2020-06-09,Nigeria,DIST03,Helping Hands of Ngwobo
+0906132020,2020-06-13,Somalia,DIST01,Do Good Feel Good
+1006212020,2020-06-21,Nigeria,DIST02,FIMO ORE
+1106252020,2020-06-25,Australia,DIST03,Australian Red Cross
+1206302020,2020-06-30,Chad,DIST02,End of Suffering
+1307042020,2020-07-04,Oxfam,DIST04,Oxfam
+1407082020,2020-07-08,Nigeria,DIST01,Helping Hands of Ngwobo
+1507152020,2020-07-15,Sierra-Leone,DIST03,Servant of Gods
