@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phase 3</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+img {
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+</style>
+</head>
+
+  <!-- WARNING extra copy and pasting has left formatting a bit of a mess-->
+
+<body style="background-color:pink;">
+
+  <!--Navbar code, note that items on the navbar appear in this order-->
+
+<nav class="navbar" style = "background-color: pink">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-left" href="#">
+    <img src="CC.png" alt="Logo" width="100px">
+     </a>
+      <a class="navbar-brand" href="#home">Clothes Circle</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+        <li class="active">
+    <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu1">Update Pickup Date</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu2">Display Packages</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu3">Goods Shipped</a>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu4">Partners Packages(view)</a>
+        </li>
+		<li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu5">Num of Packages(view)</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#team">Meet the Team</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#about">Documentation</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+  <!-- Tab content that spews results when a tab is clicked-->
+<div class="tab-content">
+  <div class="tab-pane container active" id="home">
+      <div>
+          <center>
+            <h1 align="center">Clothes Circle</h1>
+            <img src="CC.png" alt="Logo" align="right" width="300" height="300"><h2 align="left">Mission Statement:<br /></h2>
+
+            <h2 align="left">An Organization under United Nations - <u>Clothes Circle</u>. Which will help to break a barrier<br /> between rich and poor clothing needs. Specifically it seeks to address UN's 17 Sustainable goals.<br /> These Include:<br /></h2>
+            <h2 align="left"> 1) No Poverty <br />2) Decent Work and Economic Growth<br />3) Responsible Consumption and Production</h2>
+
+            <br/><br/><br /><br /><br /><br />
+            <h1 align="center">How it Works: Process</h1><br />
+            <img src="process.png" align="right" width="30%"><h3 align="left">Step 1: Contracting few distribution centers nearby who have high online return rate and are planning on trashing their items.<br /><br />Step 2: Make an appointment with Clothes Circle using online booking system.<br />
+              <br />Step 3: Pack identical clothing items in bags and attach booking number on the top of each bag.<br /><br />Step 4: A Clothing Circle truck will collect your items.<br /><br />Step 5: We will sort the items based on conditions (damaged or good)
+              Damaged items will be sent to Oxfam to be recycled good items will be re-circled to impoverished communities. </h3>
+
+              <br/><br/><br /><br /><br /><br />
+              <h1 align="center">Destinations</h1><br />
+              <h3 align="left">We will be donating our packages to impoverished countries and few recyling Partners.<br/><br />1. Countries:<br />Nigeria <br />Somolia <br />Chad<br />Afghanistan<br /><br/></h3>
+              <img src="oxfam.png" align="right" width="30%"><h3 align="left">2. Partners:<br />Oxfam<br />Community Recycling</h3>
+
+
+                           </center>
+  </div>
+  </div>
+
+<div class="tab-pane container fade" id="menu1">
+      <form method = "POST" action = "UPDATEpickupdetails.php">
+          <center>
+
+              <br/><br/><br /><br />
+              <h1>Greetings,</h1>
+              <h3 align="left">Useful information about the page:<br />This page will help us update any change of pickup details from our warehouses<br /></h3>
+              <h3 align="left">We will locate the item to be changed by the PackageID and enter the New Pickup Date requested!</h3>
+                          <br/> <div class="jumbotron text-center">
+                                        <h2>Enter Details to Update</h2>
+                <p class = text-center>Package ID: </p><input id="txtcu" type = "text" name="pid"/>
+                              <p class = text-center>New Pickup Date: </p><input id="txtcu" type = "text" name="date"/>
+                            <input style="vertical-align: center" id="butto" type = "submit" value = "Update">
+                          </div>
+
+          </center>
+      </form>
+  </div>
+
+<div class="tab-pane container fade" id="menu2">
+      <form method = "POST" action = "SELECTquery.php">
+          <center>
+
+            <br/><br/><br /><br />
+            <h1>Greetings,</h1>
+            <h3 align="left">Useful information about the page:<br />This page will help us show any packages that are being sent to location provided<br /></h3>
+            <h3 align="left">We will need the destination to display packages sent.</h3>
+                            <div class="jumbotron text-center">
+                                <h2>Enter Details to Display</h2>
+              <p class = text-center>Destination of Shipment</p>
+        <input id="txtcu" type = "text" name="destination"/>
+              <input style="vertical-align: center" id="selectredirect" type = "submit" value = "Display">
+                            </div>
+          </center>
+      </form>
+  </div>
+    <div class="tab-pane container fade" id="menu3">
+        <form method = "POST" action = "shipment.delete.php">
+          <center>
+            <br/><br/><br /><br />
+            <h1>Greetings,</h1>
+            <h3 align="left">Useful information about the page:<br />This page will help us delete any the entry, if any shipment is been shiped and no longer exsist in the distribution center<br /></h3>
+            <h3 align="left">We will need the ShipmentId to delete packages sent.</h3>
+
+                            <div class="jumbotron text-center">
+                                <h2>Enter Shipment to Delete</h2>
+                            <p class = text-center>Shipment ID:</p><input id="txtcu" type = "text" name="shipid"/p>
+                             <input style="vertical-align: center" id="butto" type = "submit" value = "Delete">
+                            </div>
+          </center>
+        </form>
+    </div>
+	<div class="tab-pane container fade" id="menu4">
+      <form method = "POST" action = "SELECTViewPackages.php">
+          <center>
+
+                           <br/><br/><br /><br />
+            <h1>Greetings,</h1>
+            <h3 align="left">Useful information about the page:<br />
+              this page display us all the packages that are sent to our partners. This is only virtual information. So we will be using it to predict shipments in reality!<br /></h3>
+                            <div class="jumbotron text-center" >
+                              <h3>Click the “display” button to show the results</h3>
+
+                                <!--<h2>Enter Details to Display</h2>
+
+              <p class = text-center>Enter Destination</p>
+			  <input id="txtcu" type = "text" name="destination"/>-->
+              <input style="vertical-align: center" id="selectredirect" type = "submit" value = "Display">
+                            </div>
+          </center>
+      </form>
+  </div>
+  <div class="tab-pane container fade" id="menu5">
+      <form method = "POST" action = "SELECTViewCount.php">
+          <center>
+
+                                       <br/><br/><br /><br />
+            <h1>Greetings,</h1>
+            <h3 align="left">Useful information about the page:<br />
+                This page will tell us the number of packages are sent to respective destination
+                Note:this is only virtual information. So we will use this information to predict shipments in reality!</h3><br />
+
+                            <div class="jumbotron text-center" >
+
+                                <h2>Enter the destination name (could be a country name or Recycling Partners)</h2>
+
+              <p class = text-center>Enter Destination</p>
+			  <input id="txtcu" type = "text" name="destination"/>
+              <input style="vertical-align: center" id="selectredirect" type = "submit" value = "Display">
+                            </div>
+          </center>
+      </form>
+  </div>
+
+    <div class="tab-pane container fade" id="team">
+          <center>
+
+               <h1>Meet the Team</h1>
+
+<div class="container">
+  <div class="row">
+    <!-- Team Member 1 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="inara.JPG" class="card-img-top" alt="..." width="200px" height="275px">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Inara Rupani</h5>
+          <div class="card-text text-black-50">Web Developer</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 2 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="Austin_HS.jpg" class="card-img-top" alt="..." width="200px" height="275px">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Austin Hansen</h5>
+          <div class="card-text text-black-50">Web Developer</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 3 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="keen.jpg" class="card-img-top" alt="..." width="200px" height="275px">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Kiran Karki</h5>
+          <div class="card-text text-black-50">Web Developer</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 4 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="Maria.jpg" class="card-img-top" alt="..." width="200px" height="275px">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Tam Maria Doan</h5>
+          <div class="card-text text-black-50">Web Developer</div>
+        </div>
+      </div>
+    </div>
+      <!-- Team Member 5 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="Rikrish.jpg" class="card-img-top" alt="..." width="200px" height="275px">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Rikrish Shrestha</h5>
+          <div class="card-text text-black-50">Web Developer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+
+</div>
+          </center>
+  </div>
+<div class="tab-pane container fade" id="about">
+      <div>
+          <center>
+               <br/><br/><br /><br />
+              <h1 align="center">Clothes Circle Documentation</h1>
+              <h3 align="left">Useful information about the page:<br />
+              Shows the scema and EER for the backend portion of this project</h3><br />
+
+                            <div class="card-body text-center">
+                            <h2 class="card-title mb-0">EER Diagram</h2>
+                             </div>
+                        <img src="EER.png" class="card-img-top" alt="..." width="500px" height="500px">
+
+                            <div class="card-body text-center">
+                            <h2 class="card-title mb-0">Schema</h2>
+                            </div>
+                             <img src="Schema.png" class="card-img-top" alt="..." width="500px" height="500px">
+
+                           </div>
+
+              </center>
+      </div>
+</div>
+</div>
+  <!-- extra tabular buttons for convenience -->
+<div class="container-fluid bg-grey">
+</p>
+                 <div class="btn-group btn-group-justified">
+                  <a data-toggle="tab" href="#home" class="btn btn-primary">
+                          <span class="glyphicon glyphicon-home"></span>Home</a>
+                  <a data-toggle="tab" href="#menu1" class="btn btn-primary">
+                  <span class="glyphicon-triangle-up"></span>Update Pickup Date</a>
+                  <a data-toggle="tab" href="#menu2" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-picture"></span>Display Packages</a>
+                     <a data-toggle="tab" href="#menu3" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-trash"></span>Goods Shipped</a>
+				  <a data-toggle="tab" href="#menu4" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-picture"></span>Partners Packages(view)</a>
+				  <a data-toggle="tab" href="#menu5" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-picture"></span>Num of Packages(view)</a>
+                     <a data-toggle="tab" href="#team" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-road"></span>Meet the Team</a>
+                     <a data-toggle="tab" href="#about" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-inbox"></span>Documentation</a>
+                 </div>
+              </div>
+              </center>
+      </form>
+      </div>
+</body>
+</html>
